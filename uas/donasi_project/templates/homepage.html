@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Halaman Utama - Donasi</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+        text-align: center;
+      }
+      .header {
+        position: relative;
+        width: 100%;
+        height: 300px;
+        background: url("/static/images/header-donasi.jpg") no-repeat center
+          center/cover;
+      }
+      .header h1 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        font-size: 36px;
+        background: rgba(0, 0, 0, 0.6);
+        padding: 10px 20px;
+        border-radius: 8px;
+      }
+      .content {
+        margin: 40px;
+        padding: 20px;
+        background: white;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+      }
+      .cta-btn {
+        display: inline-block;
+        margin-top: 20px;
+        padding: 12px 20px;
+        font-size: 18px;
+        color: white;
+        background-color: #007bff;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: 0.3s;
+      }
+      .cta-btn:hover {
+        background-color: #0056b3;
+      }
+      .kampanye-section {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+      }
+      .kampanye-card {
+        width: 300px;
+        background: white;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        overflow: hidden;
+        text-align: left;
+      }
+      .kampanye-card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+      }
+      .kampanye-card .card-content {
+        padding: 15px;
+      }
+      .kampanye-card h3 {
+        margin: 0;
+        font-size: 20px;
+      }
+      .kampanye-card p {
+        font-size: 14px;
+        color: #555;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <div class="header">
+      <h1>Selamat Datang di Sistem Penggalangan Dana</h1>
+    </div>
+
+    <!-- Konten Utama -->
+    <div class="content">
+      <h2>Jadilah Bagian dari Perubahan!</h2>
+      <p>
+        Mari bersama-sama membantu mereka yang membutuhkan dengan donasi Anda.
+      </p>
+      <a href="{% url 'daftar_kampanye' %}" class="cta-btn">Lihat Kampanye</a>
+      <a href="{% url 'tambah_kampanye' %}" class="cta-btn" style="background-color: #28a745;">Buat Kampanye</a>
+    </div>
+
+    <!-- Bagian Kampanye -->
+    <h2>Kampanye Terbaru</h2>
+    <div class="kampanye-section">
+      <div class="kampanye-card">
+        <img src="/static/images/kampanye1.jpg" alt="Kampanye 1" />
+        <div class="card-content">
+          <h3>Bantu Anak Yatim</h3>
+          <p>Target: Rp 50.000.000</p>
+        </div>
+      </div>
+      <div class="kampanye-card">
+        <img src="/static/images/kampanye2.jpg" alt="Kampanye 2" />
+        <div class="card-content">
+          <h3>Peduli Bencana Alam</h3>
+          <p>Target: Rp 100.000.000</p>
+        </div>
+      </div>
+      <div class="kampanye-card">
+        <img src="/static/images/kampanye3.jpg" alt="Kampanye 3" />
+        <div class="card-content">
+          <h3>Bantuan Pendidikan</h3>
+          <p>Target: Rp 30.000.000</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
